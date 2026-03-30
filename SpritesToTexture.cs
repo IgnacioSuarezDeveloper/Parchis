@@ -4,6 +4,8 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace PARCHIS
 {
+    //esta clase carga sprite png entero que contiene tablero fichas dados y de el estan las diferentes funciones
+    //de draw que recortan partes de sprite png como los dados o las fichas para luego dibujarlas.
     internal static class SpritesToTexture
     {
        static Texture2D fullSprite;

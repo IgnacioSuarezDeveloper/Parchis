@@ -31,7 +31,12 @@ namespace PARCHIS
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            SpritesToTexture.LoadFullSprite(Content);           
+
+            //carga sprite.png entero.
+            SpritesToTexture.LoadFullSprite(Content);
+
+            //carga letras.png entero.
+            TextDrawer.LoadLettersTexture(Content);
         }
 
         protected override void Update(GameTime gameTime)
@@ -57,6 +62,9 @@ namespace PARCHIS
 
             //dibujando ficha.
             SpritesToTexture.DrawRedChip(_spriteBatch,100,100);
+
+            //dibujando todas las letras.
+            TextDrawer.DrawLettersTexture(_spriteBatch);
 
 
             
