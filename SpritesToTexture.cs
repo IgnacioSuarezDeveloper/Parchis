@@ -31,11 +31,56 @@ namespace PARCHIS
             // Dibujamos
             _spriteBatch.Draw(
                 fullSprite,
-                new Rectangle((int)x,(int)y,50,50),
+                new Rectangle((int)x, (int)y, 100, 100),
                 fuente,
                 Color.White
             );
         }
+
+        //dibuaja ficha amarilla.
+        public static void DrawYellowChip(SpriteBatch _spriteBatch, float x, float y)
+        {
+            // Definimos qué parte del sprite queremos (x, y, ancho, alto)
+            Rectangle fuente = new Rectangle(200, 0, 200, 250);
+
+            // Dibujamos
+            _spriteBatch.Draw(
+                fullSprite,
+                new Rectangle((int)x, (int)y, 100, 100),
+                fuente,
+                Color.White
+            );
+        }
+
+        //dibuja la ficha verde.
+        public static void DrawGreenChip(SpriteBatch _spriteBatch, float x, float y)
+        {
+            // Definimos qué parte del sprite queremos (x, y, ancho, alto)
+            Rectangle fuente = new Rectangle(200, 250, 200, 250);
+
+            // Dibujamos
+            _spriteBatch.Draw(
+                fullSprite,
+                new Rectangle((int)x, (int)y, 100, 100),
+                fuente,
+                Color.White
+            );
+        }
+
+        //dibuja la ficha azul.
+        public static void DrawBlueChip(SpriteBatch _spriteBatch, float x, float y)
+        {
+            // Definimos qué parte del sprite queremos (x, y, ancho, alto)
+            Rectangle fuente = new Rectangle(500, 250, 200, 250);
+
+            // Dibujamos
+            _spriteBatch.Draw(
+                fullSprite,
+                new Rectangle((int)x, (int)y, 100, 100),
+                fuente,
+                Color.White
+            );
+        }//ficha azul.
 
         //dibuja Tablero.
         public static void DrawBoard(SpriteBatch _spriteBatch, float x,float y)

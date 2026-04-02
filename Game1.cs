@@ -1,6 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
+using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
 
 namespace PARCHIS
 {
@@ -8,6 +11,7 @@ namespace PARCHIS
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private Player [] PlayersList;
 
 
         public Game1()
@@ -35,8 +39,19 @@ namespace PARCHIS
             //carga sprite.png entero.
             SpritesToTexture.LoadFullSprite(Content);
 
-            //carga letras.png entero.
-            TextDrawer.LoadLettersTexture(Content);
+
+            //Inicializar lista de 4 jugadores.
+            PlayersList = new Player[4];
+
+            for(int i = 0; i < PlayersList.Length; i++)
+            {
+                PlayersList[i] = new Player((ColorChip)i, 100,100);
+                //Inicializando las fichas de cada jugador.
+
+            }
+
+            //Inicializar Dado.
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -56,20 +71,21 @@ namespace PARCHIS
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-
+            
             //dibujando la imagen.
             SpritesToTexture.DrawBoard(_spriteBatch, 10, 10);
 
-            //dibujando ficha.
-            SpritesToTexture.DrawRedChip(_spriteBatch,100,100);
 
-            //dibujando todas las letras.
-            TextDrawer.DrawLettersTexture(_spriteBatch);
+            //dibujar la ficha verde.
 
-
+            foreach(Player p in PlayersList)
+            {
+                p.DrawAllChips(_spriteBatch);
+            }
             
-            _spriteBatch.End();
+            
 
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }

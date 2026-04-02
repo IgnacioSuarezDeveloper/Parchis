@@ -1,0 +1,39 @@
+//echar partida de parchis.
+
+//identificar los pasos hacer un diagrama de flujo sencillo.
+
+	1.Comienza la partida.
+		2. Inicializando
+			Lista de jugadores con 4 jugadores.
+			Dado.
+		
+		3.Bucle Principal 
+			por cada jugador de la lista 
+				tirar Dado
+				si el jugador tiene fichas en casa y sale 5 el jugador saca ficha y le toca al siguiente jugador.
+				si el jugador no tiene fichas en casa y sale 5 el jugador elige que ficha quiere mover.
+				si el jugador saca numero diferente de 5 y tiene almenos una ficha fuera de casa puede mover tantas casillas como el numero que salga.
+				si el jugador saca 6 puede volver a tirar como maximo puede sacar 3 6 de manera consecutiva al 3 seis la ultima ficha que ha movido se le manda a casa.
+				La pieza del jugador puede avanzar si no hay dos piezas juntas.
+				si la pieza del jugador se come otra pieza de  otro color avanza 20.
+				si la pieza del jugador llega a casa avanza 10;
+			
+		 ¿Hay algun jugador que haya metido las cuatro fichas? 
+			
+			si si hay ganador  
+			¿quieres volver a jugar¿
+				si si 
+					devolver las casillas a la casa.
+					devolver el estado de la pieza a en casa.
+				si no 
+					no fuera de la aplicación.
+
+			o  si no no hay ganador 
+			
+
+
+
+	
+	
+
+//ver la distancia de inicializacion de cada ficha para que queden centradas donde toca.

@@ -7,12 +7,24 @@
       "RelativeMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|c:\\users\\nache\\onedrive\\escritorio\\parchis\\textdrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|solutionrelative:textdrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|c:\\users\\nache\\onedrive\\escritorio\\parchis\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|c:\\users\\nache\\onedrive\\escritorio\\parchis\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|solutionrelative:entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|c:\\users\\nache\\onedrive\\escritorio\\parchis\\chip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|solutionrelative:chip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|c:\\users\\nache\\onedrive\\escritorio\\parchis\\spritestotexture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|solutionrelative:spritestotexture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|c:\\users\\nache\\onedrive\\escritorio\\parchis\\pasos.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{22FBAD2E-FEA2-45FD-A32A-DC687FC4F2FE}|PARCHIS.csproj|solutionrelative:pasos.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +34,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Chip.cs",
+              "DocumentMoniker": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\Chip.cs",
+              "RelativeDocumentMoniker": "Chip.cs",
+              "ToolTip": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\Chip.cs",
+              "RelativeToolTip": "Chip.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T13:58:50.346Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Entity.cs",
+              "DocumentMoniker": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\Entity.cs",
+              "RelativeDocumentMoniker": "Entity.cs",
+              "ToolTip": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\Entity.cs",
+              "RelativeToolTip": "Entity.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T13:53:27.624Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SpritesToTexture.cs",
+              "DocumentMoniker": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\SpritesToTexture.cs",
+              "RelativeDocumentMoniker": "SpritesToTexture.cs",
+              "ToolTip": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\SpritesToTexture.cs",
+              "RelativeToolTip": "SpritesToTexture.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA9wBkAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T17:44:33.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\Player.cs",
+              "RelativeDocumentMoniker": "Player.cs",
+              "ToolTip": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\Player.cs",
+              "RelativeToolTip": "Player.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T17:32:27.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Pasos.txt",
+              "DocumentMoniker": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\Pasos.txt",
+              "RelativeDocumentMoniker": "Pasos.txt",
+              "ToolTip": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\Pasos.txt",
+              "RelativeToolTip": "Pasos.txt",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-04-02T14:20:51.28Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,35 +111,9 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAkwEIAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAADwvy8AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-30T10:15:42.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TextDrawer.cs",
-              "DocumentMoniker": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\TextDrawer.cs",
-              "RelativeDocumentMoniker": "TextDrawer.cs",
-              "ToolTip": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\TextDrawer.cs",
-              "RelativeToolTip": "TextDrawer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T19:16:17.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SpritesToTexture.cs",
-              "DocumentMoniker": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\SpritesToTexture.cs",
-              "RelativeDocumentMoniker": "SpritesToTexture.cs",
-              "ToolTip": "C:\\Users\\nache\\OneDrive\\Escritorio\\PARCHIS\\SpritesToTexture.cs",
-              "RelativeToolTip": "SpritesToTexture.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T18:16:29.748Z",
               "EditorCaption": ""
             }
           ]
