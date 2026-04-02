@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PARCHIS
 {
-    //para crear cada jugador de la partida.
+    //para crear cada jugador de la partida con sus fichas del mismo color que el jugador.
     internal class Player
     {
         //fichas.
@@ -18,6 +18,7 @@ namespace PARCHIS
         {
             get { return fichas; }
         }
+
         public Player(ColorChip _color, int xInit, int yInit)
         {
             //fichas del jugador.
@@ -35,6 +36,7 @@ namespace PARCHIS
             }
 
         }
+
         public void DrawAllChips(SpriteBatch _spriteBatch)
         {
             //dibujar la ficha verde.

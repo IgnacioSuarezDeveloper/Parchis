@@ -34,3 +34,4 @@ C:\Users\nache\OneDrive\Escritorio\PARCHIS\obj\Debug\net9.0\ref\PARCHIS.dll
 C:\Users\nache\OneDrive\Escritorio\PARCHIS\bin\Debug\net9.0\Content\sprite.png
 C:\Users\nache\OneDrive\Escritorio\PARCHIS\bin\Debug\net9.0\Content\sprite.xnb
 C:\Users\nache\OneDrive\Escritorio\PARCHIS\bin\Debug\net9.0\Content\letras.png
+C:\Users\nache\OneDrive\Escritorio\PARCHIS\obj\Debug\net9.0\PARCHIS.sourcelink.json

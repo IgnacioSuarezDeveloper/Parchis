@@ -46,8 +46,6 @@ namespace PARCHIS
             for(int i = 0; i < PlayersList.Length; i++)
             {
                 PlayersList[i] = new Player((ColorChip)i, 100,100);
-                //Inicializando las fichas de cada jugador.
-
             }
 
             //Inicializar Dado.
@@ -72,11 +70,11 @@ namespace PARCHIS
             _spriteBatch.Begin();
 
             
-            //dibujando la imagen.
+            //dibujando tablero.
             SpritesToTexture.DrawBoard(_spriteBatch, 10, 10);
 
 
-            //dibujar la ficha verde.
+            //dibuja las fichas de todos los players.
 
             foreach(Player p in PlayersList)
             {

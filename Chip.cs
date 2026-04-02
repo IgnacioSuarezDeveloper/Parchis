@@ -22,7 +22,6 @@ namespace PARCHIS
         //heredad  y;
         //heredado X;
         //heredado Y;
-
         //constructor inicializa color de la ficha.
         public Chip(int xInit, int yInit, ColorChip ChipColor) : base(xInit, yInit)
         {

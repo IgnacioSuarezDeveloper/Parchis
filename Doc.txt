@@ -1,0 +1,20 @@
+**Clase Entity**
+
+	Molde del que heredan otras clases pensada para objetos que tienen una posicion en x en y.
+	tiene los campos x e y protected para definir las cordenadas en pantalla, un constructor donde se 
+	inicializan x e y. Tambien posee abstracto llamado Draw para que las clases que heredan de esta declaren el metodo draw
+	dentro de su propia clase.
+
+
+**Clase Chip**
+
+	representa las fichas del parchis y cada instancia 
+	tiene dos campos que son posicion en x y posicion en y (heredadadas de Entity) 
+	con sus geter X e Y para no modificar x e y desde fuera de la clase.
+	Tambien tiene otro campo que se llama color que corresponde al color de la ficha.
+	y un metodo para dibujar la ficha en la pantalla segun su color.
+	El constructor es heredado y en el se inicializa los campos x e y y se le asigna un color a la ficha.
+
+**Player**
+	
+

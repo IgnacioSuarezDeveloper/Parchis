@@ -13,7 +13,6 @@ namespace PARCHIS
     {
         protected int x;
         protected int y;
-        
         public int X
         {
             get { return x; }
