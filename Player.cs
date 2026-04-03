@@ -32,12 +32,6 @@ namespace PARCHIS
 
             //Inicializando las de fichas del jugador dandole pos x y pos y.
 
-            /*y arriba 333 - (333 / 2) rojo verde
-            y abajo 333 * 3 - (333/2); amarillo azul
-
-            x izquierda 333 - (333 / 2) rojo amarillo
-            x derecha 333 * 3 - (333/2); verde azul*/
-
             int xinit = Math.Abs(BoardWidth / 3);
             int yinit = Math.Abs(BoardHeight / 3);
             
@@ -55,12 +49,6 @@ namespace PARCHIS
                     fichas[i] = new Chip((xinit / 2 - 100) + (((int)color - 1) * (xinit - 30)) + i * InitChipSeparation, (yinit + 50) * 2, _color);
                 }
             }
-
-
-
-
-
-
         }
 
         public void DrawAllChips(SpriteBatch _spriteBatch, int BoardWidth, int BoardHeigth)

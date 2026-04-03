@@ -4,7 +4,8 @@
 
 	1.Comienza la partida.
 		2. Inicializando
-			Lista de jugadores con 4 jugadores. (COMPLETADO.)
+			Indicar numero de jugadores n
+			Lista de jugadores con n jugadores. (COMPLETADO.)
 			Dibjar las fichas en la casilla de salida (COMPLETADO.) 
 			Dado. (NEXT). (Documentacion de las clases.)
 
