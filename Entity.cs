@@ -32,6 +32,6 @@ namespace PARCHIS
             y = InitY;
         }
 
-        public abstract void Draw(SpriteBatch _spriteBatch);
+        public abstract void Draw(SpriteBatch _spriteBatch, int BoardWidth, int BoardHeight);
     }
 }

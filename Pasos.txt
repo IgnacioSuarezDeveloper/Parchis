@@ -4,9 +4,11 @@
 
 	1.Comienza la partida.
 		2. Inicializando
-			Lista de jugadores con 4 jugadores.
-			Dado.
-		
+			Lista de jugadores con 4 jugadores. (COMPLETADO.)
+			Dibjar las fichas en la casilla de salida (COMPLETADO.) 
+			Dado. (NEXT). (Documentacion de las clases.)
+
+
 		3.Bucle Principal 
 			por cada jugador de la lista 
 				tirar Dado
@@ -17,6 +19,7 @@
 				La pieza del jugador puede avanzar si no hay dos piezas juntas.
 				si la pieza del jugador se come otra pieza de  otro color avanza 20.
 				si la pieza del jugador llega a casa avanza 10;
+
 			
 		 ¿Hay algun jugador que haya metido las cuatro fichas? 
 			
@@ -36,4 +39,12 @@
 	
 	
 
-//ver la distancia de inicializacion de cada ficha para que queden centradas donde toca.
+//ver la distancia de inicializacion de cada ficha para que queden centradas donde toca. (Conseguido.)
+1000x1000
+
+y arriba 333 - (333 / 2) rojo verde
+y abajo 333 * 3 - (333/2); amarillo azul
+
+x izquierda 333 - (333 / 2) rojo amarillo
+x derecha 333 * 3 - (333/2); verde azul
+//pintar un dado.

@@ -12,6 +12,8 @@ namespace PARCHIS
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private Player [] PlayersList;
+        private int BoardWidth;
+        private int BoardHeidth;
 
 
         public Game1()
@@ -36,16 +38,19 @@ namespace PARCHIS
 
             // TODO: use this.Content to load your game content here
 
+
             //carga sprite.png entero.
             SpritesToTexture.LoadFullSprite(Content);
 
+            BoardWidth = 1000;
+            BoardHeidth = 1000;
 
             //Inicializar lista de 4 jugadores.
             PlayersList = new Player[4];
 
             for(int i = 0; i < PlayersList.Length; i++)
             {
-                PlayersList[i] = new Player((ColorChip)i, 100,100);
+                PlayersList[i] = new Player((ColorChip)i, BoardWidth,BoardHeidth);
             }
 
             //Inicializar Dado.
@@ -64,21 +69,21 @@ namespace PARCHIS
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Brown);
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
             
             //dibujando tablero.
-            SpritesToTexture.DrawBoard(_spriteBatch, 10, 10);
+            SpritesToTexture.DrawBoard(_spriteBatch, 10, 10, BoardWidth, BoardHeidth);
 
 
             //dibuja las fichas de todos los players.
 
             foreach(Player p in PlayersList)
             {
-                p.DrawAllChips(_spriteBatch);
+                p.DrawAllChips(_spriteBatch, BoardWidth, BoardHeidth);
             }
             
             

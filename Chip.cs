@@ -10,9 +10,9 @@ namespace PARCHIS
     enum ColorChip
     {
         red,
-        blue,
+        yellow,
         green,
-        yellow
+        blue
     }
     internal class Chip : Entity
     {
@@ -23,29 +23,30 @@ namespace PARCHIS
         //heredado X;
         //heredado Y;
         //constructor inicializa color de la ficha.
+
         public Chip(int xInit, int yInit, ColorChip ChipColor) : base(xInit, yInit)
         {
             color = ChipColor;
         }
 
         //dibuja la ficha del color que es.
-        public override void Draw(SpriteBatch _spriteBatch)
+        public override void Draw(SpriteBatch _spriteBatch, int BoardWidth, int BoardHeigth)
         {
             if(color == ColorChip.red)
             {
-                SpritesToTexture.DrawRedChip(_spriteBatch, this.x, this.y);
+                SpritesToTexture.DrawRedChip(_spriteBatch, this.x, this.y, BoardWidth, BoardHeigth);
 
             }else if(color == ColorChip.green)
             {
-                SpritesToTexture.DrawGreenChip(_spriteBatch, this.x, this.y);
+                SpritesToTexture.DrawGreenChip(_spriteBatch, this.x, this.y, BoardWidth, BoardHeigth);
 
             }else if(color == ColorChip.yellow)
             {
-                SpritesToTexture.DrawYellowChip(_spriteBatch, this.x, this.y);
+                SpritesToTexture.DrawYellowChip(_spriteBatch, this.x, this.y, BoardWidth, BoardHeigth);
 
             }else if(color == ColorChip.blue)
             {
-                SpritesToTexture.DrawBlueChip(_spriteBatch, this.x, this.y);
+                SpritesToTexture.DrawBlueChip(_spriteBatch, this.x, this.y, BoardWidth, BoardHeigth);
             }
         }
     }
