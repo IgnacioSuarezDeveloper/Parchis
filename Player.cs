@@ -10,15 +10,19 @@ namespace PARCHIS
     //para crear cada jugador de la partida con sus fichas del mismo color que el jugador.
     internal class Player
     {
-        //fichas.
+        //4 fichas.
         Chip [] fichas;
+
+        //color del jugador.
         ColorChip color;
 
+        //geter fichas.
         public Chip [] Fichas
         {
             get { return fichas; }
         }
 
+        //constructor.
         public Player(ColorChip _color, int BoardWidth, int BoardHeight)
         {
             //fichas del jugador.
@@ -51,13 +55,15 @@ namespace PARCHIS
             }
         }
 
+        //dibuja todas las fichas del jugador.
         public void DrawAllChips(SpriteBatch _spriteBatch, int BoardWidth, int BoardHeigth)
         {
-            //dibujar la ficha verde.
+            
             for (int i = 0; i < 4; i++)
             {
                 if (fichas[i] != null)
                 {
+                    //dibuja las fichas del jugador.
                     fichas[i].Draw(_spriteBatch,BoardWidth, BoardHeigth);
                 }
             }

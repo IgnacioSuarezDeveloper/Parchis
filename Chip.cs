@@ -49,5 +49,6 @@ namespace PARCHIS
                 SpritesToTexture.DrawBlueChip(_spriteBatch, this.x, this.y, BoardWidth, BoardHeigth);
             }
         }
+
     }
 }

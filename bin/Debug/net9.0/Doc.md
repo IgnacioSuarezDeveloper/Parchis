@@ -15,7 +15,11 @@
 	y un metodo para dibujar la ficha en la pantalla.
 	El constructor es heredado y en el se inicializa los campos x e y y se le asigna un color a la ficha.
 
-**Player**
+**Clase Player**
 	
+	representa el jugador el cual posee un array de *Chips* una variable para almacenar su color
+	y un constructor en el cual se inicializa la posicion inicial de las fichas que tiene segun 
+	su color en la zona correspondiente del tablero y un metodo para dibujar todas sus fichas en la pantalla
+
 
 	

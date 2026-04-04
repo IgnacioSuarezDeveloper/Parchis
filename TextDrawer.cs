@@ -10,10 +10,12 @@ namespace PARCHIS
     {
         static Texture2D lettersTexture;
         
+
         public static Texture2D LettersTexture
         {
             get { return lettersTexture; }
         }
+
 
         //cargar la textura de letras
         public static void LoadLettersTexture(ContentManager Content)
@@ -39,6 +41,7 @@ namespace PARCHIS
 
             CutLetter(_spriteBatch, texto, width, height, 0,0);
         }
+
 
         //dibujar el texto.
         public static void DrawTextUpdate(SpriteBatch spriteBatch, Texture2D spriteSheet, string text, Vector2 position, int letterSize = 200)

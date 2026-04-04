@@ -8,15 +8,33 @@ namespace PARCHIS
     //de draw que recortan partes de sprite png como los dados o las fichas para luego dibujarlas.
     internal static class SpritesToTexture
     {
-       static Texture2D fullSprite;
+        //almacena el sprite del parchis. png.
+
+        static Texture2D fullSprite;
+
+        //almacena el sprite de botones .png.
+
         static Texture2D buttonsSprite;
 
+        //porcentaje del tablero que es el tamaño de las fichas.
+
+        static int percentejeChipSize = 20;
+
         //cargando la imagen completa.
+
         public static void LoadFullSprite(ContentManager Content)
         {
+
+            //cargando el sprite del parchis.
+
             fullSprite = Content.Load<Texture2D>("sprite.png");
+
+            //cargando el sprite de botones.
+
             buttonsSprite = Content.Load<Texture2D>("buttons.png");
+
         }
+
 
         //dibujando todo el sprite de parchis.
         public static void DrawFullParchisSprite(SpriteBatch _spriteBatch)
@@ -24,12 +42,14 @@ namespace PARCHIS
             _spriteBatch.Draw(fullSprite, new Vector2(0, 0), null, Color.White, 0f, Vector2.Zero, 0.5f, SpriteEffects.None, 0f);
         }
 
+
         //dibujando todo el sprite de botones.
         public static void DrawFullButtonsSprite(SpriteBatch _spriteBatch)
         {
             _spriteBatch.Draw(buttonsSprite, new Vector2(0, 0), null, Color.White, 0f, Vector2.Zero, 0.5f, SpriteEffects.None, 0f);
 
         }
+
 
         //dibuja Ficha roja.
         public static void DrawRedChip(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeigth)
@@ -40,11 +60,12 @@ namespace PARCHIS
             // Dibujamos
             _spriteBatch.Draw(
                 fullSprite,
-                new Rectangle((int)x, (int)y, BoardWidth / 10, BoardHeigth / 10),
+                new Rectangle((int)x, (int)y, BoardWidth / percentejeChipSize, BoardHeigth / percentejeChipSize),
                 fuente,
                 Color.White
             );
         }
+
 
         //dibuaja ficha amarilla.
         public static void DrawYellowChip(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeigth)
@@ -55,11 +76,12 @@ namespace PARCHIS
             // Dibujamos
             _spriteBatch.Draw(
                 fullSprite,
-               new Rectangle((int)x, (int)y, (int)(BoardWidth / 10), (int)(BoardHeigth / 10)),
+               new Rectangle((int)x, (int)y, (int)(BoardWidth / percentejeChipSize), (int)(BoardHeigth / percentejeChipSize)),
                 fuente,
                 Color.White
             );
         }
+
 
         //dibuja la ficha verde.
         public static void DrawGreenChip(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeigth)
@@ -70,11 +92,12 @@ namespace PARCHIS
             // Dibujamos
             _spriteBatch.Draw(
                 fullSprite,
-                new Rectangle((int)x, (int)y, BoardWidth / 10, BoardHeigth / 10),
+                new Rectangle((int)x, (int)y, BoardWidth / percentejeChipSize, BoardHeigth / percentejeChipSize),
                 fuente,
                 Color.White
             );
         }
+
 
         //dibuja la ficha azul.
         public static void DrawBlueChip(SpriteBatch _spriteBatch, float x, float y , int BoardWidth, int BoardHeight)
@@ -85,11 +108,12 @@ namespace PARCHIS
             // Dibujamos
             _spriteBatch.Draw(
                 fullSprite,
-               new Rectangle((int)x, (int)y, BoardWidth / 10, BoardHeight / 10),
+               new Rectangle((int)x, (int)y, BoardWidth / percentejeChipSize, BoardHeight / percentejeChipSize),
                 fuente,
                 Color.White
             );
         }//ficha azul.
+
 
         //dibuja Tablero.
         public static void DrawBoard(SpriteBatch _spriteBatch, float x,float y, int BoardWidth, int BoardHeigth)
@@ -108,6 +132,7 @@ namespace PARCHIS
             );
         }
 
+
         //dibujar boton izquierdo.
         public static void DrawLeftButton(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeight)
         {
@@ -123,6 +148,7 @@ namespace PARCHIS
             );
         }//ficha azul.
         
+
         //dibujar boton derecho.
         public static void DrawRightButton(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeight)
         {

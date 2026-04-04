@@ -30,6 +30,9 @@
     <None Update="Content\buttons.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Content\File.spritefont">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Content\letras.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

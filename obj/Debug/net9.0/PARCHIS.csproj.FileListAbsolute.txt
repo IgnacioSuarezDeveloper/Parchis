@@ -37,3 +37,5 @@ C:\Users\nache\OneDrive\Escritorio\PARCHIS\bin\Debug\net9.0\Content\letras.png
 C:\Users\nache\OneDrive\Escritorio\PARCHIS\obj\Debug\net9.0\PARCHIS.sourcelink.json
 C:\Users\nache\OneDrive\Escritorio\PARCHIS\bin\Debug\net9.0\Content\buttons.png
 C:\Users\nache\OneDrive\Escritorio\PARCHIS\bin\Debug\net9.0\Doc.md
+C:\Users\nache\OneDrive\Escritorio\PARCHIS\bin\Debug\net9.0\Content\File.spritefont
+C:\Users\nache\OneDrive\Escritorio\PARCHIS\bin\Debug\net9.0\Content\File.xnb

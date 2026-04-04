@@ -5,10 +5,8 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/nache/OneDrive/Escritorio/PARCHIS/Content/File.spritefont</File>
-    <File>C:/Users/nache/OneDrive/Escritorio/PARCHIS/Content/sprite.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

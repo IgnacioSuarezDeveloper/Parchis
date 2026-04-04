@@ -17,16 +17,19 @@ namespace PARCHIS
         private static Vector2 MaxButtonPositionxy;
         private static Entity[] buttons;
 
+        //almacena la posicion del boton izquierdo.
         public static Vector2 MInusButtonPositionxy
         {
             get { return MinusButtonPositionxy; }
         }
 
+        //almacena la posicion del boton derecho.
         public static Vector2 MAxButtonPositionxy
         {
             get { return MaxButtonPositionxy; }
         }
 
+        //geter seter de n players.
         public static int NPlayers
         {
             get { return Nplayers; }
@@ -43,13 +46,18 @@ namespace PARCHIS
             }
         }
 
+        //get set booleano n players seleccionado ?
         public static bool SelectedNPlayers
         {
             get { return selectedNPlayers; }
+            set { selectedNPlayers = value; }
         }
 
+
+        //inicializa posicion de los botones del menu para seleccionar numero de Jugadores.
         public static void InitializeButtons(Vector2 Mxy, Vector2 Pxy)
         {
+            selectedNPlayers = false;
             buttons = new Entity[2];
             MinusButtonPositionxy = Mxy;
             MaxButtonPositionxy = Pxy;
