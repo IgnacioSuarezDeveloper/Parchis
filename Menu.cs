@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
+using Microsoft.Xna.Framework;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,14 +9,15 @@ namespace PARCHIS
 {
     internal static class Menu
     {
-        
-
+        #region properties
         private static bool selectedNPlayers;
         private static int Nplayers;
         private static Vector2 MinusButtonPositionxy;
         private static Vector2 MaxButtonPositionxy;
-        private static Entity[] buttons;
+        private static Vector2 OkButtonPositionxy;
+        #endregion
 
+        #region methods
         //almacena la posicion del boton izquierdo.
         public static Vector2 MInusButtonPositionxy
         {
@@ -29,20 +30,23 @@ namespace PARCHIS
             get { return MaxButtonPositionxy; }
         }
 
+        //almacena la posicion del boton ok.
+        public static Vector2 OKButtonPositionxy
+        {
+            get { return OkButtonPositionxy; }
+        }
+
         //geter seter de n players.
         public static int NPlayers
         {
             get { return Nplayers; }
             set
             {
-                if(value >= 1 && value <= 4)
+                if(value >= 2 && value <= 4)
                 {
                     Nplayers = value;
                 }
-                else
-                {
-                    throw new Exception("number of players not abailable.");
-                }
+
             }
         }
 
@@ -53,14 +57,77 @@ namespace PARCHIS
             set { selectedNPlayers = value; }
         }
 
-
-        //inicializa posicion de los botones del menu para seleccionar numero de Jugadores.
-        public static void InitializeButtons(Vector2 Mxy, Vector2 Pxy)
+        //Inicializa posicion de los botones del menu para seleccionar numero de Jugadores.
+        public static void InitializeButtons(Vector2 Mxy, Vector2 Pxy, Vector2 Oxy)
         {
+            Nplayers = 2;
             selectedNPlayers = false;
-            buttons = new Entity[2];
             MinusButtonPositionxy = Mxy;
             MaxButtonPositionxy = Pxy;
+            OkButtonPositionxy = Oxy;
         }
+
+        //Boton para añadir jugador.
+        public static void MaxButtonClicked(bool cliked, Vector2 MousePos, ref bool clickRightButton,  int BoardWidth, int BoardHeidth)
+        {
+
+            if (cliked)
+            {
+                if (
+                    MousePos.X >= Menu.MAxButtonPositionxy.X && MousePos.X <= Menu.MAxButtonPositionxy.X + (BoardWidth / 10)
+                    && MousePos.Y >= Menu.MAxButtonPositionxy.Y && MousePos.Y <= Menu.MAxButtonPositionxy.Y + (BoardHeidth / 10))
+                {
+                    clickRightButton = true;
+                }
+
+            }
+            else if (clickRightButton && !cliked)
+            {
+                NPlayers++;
+                clickRightButton = false;
+            }
+        }
+
+        //boton para quitar jugador.
+        public static void MinButtonClicked(bool cliked, Vector2 MousePos, ref bool clickLeftButton, int BoardWidth, int BoardHeidth)
+        {
+            if (cliked)
+            {
+                if (
+                    MousePos.X >= Menu.MinusButtonPositionxy.X && MousePos.X <= Menu.MinusButtonPositionxy.X + (BoardWidth / 10)
+                    && MousePos.Y >= Menu.MinusButtonPositionxy.Y && MousePos.Y <= Menu.MinusButtonPositionxy.Y + (BoardHeidth / 10))
+                {
+                    clickLeftButton = true;
+                }
+
+            }
+            else if (clickLeftButton && !cliked)
+            {
+                NPlayers--;
+                clickLeftButton = false;
+            }
+        }
+
+        //boton para seleccionar seleccionar numero de jugador.
+        public static void OkButtonClicked(bool cliked, Vector2 MousePos, ref bool clickOkButton, int BoardWidth, int BoardHeidth)
+        {
+            if (cliked)
+            {
+                if (
+                    MousePos.X >= Menu.OKButtonPositionxy.X && MousePos.X <= Menu.OKButtonPositionxy.X + (BoardWidth / 10)
+                    && MousePos.Y >= Menu.OKButtonPositionxy.Y && MousePos.Y <= Menu.OKButtonPositionxy.Y + (BoardHeidth / 10))
+                {
+                    clickOkButton = true;
+                }
+
+            }
+            else if (clickOkButton && !cliked)
+            {
+                selectedNPlayers = true;
+                clickOkButton = false;
+            }
+        }
+        #endregion
+
     }
 }

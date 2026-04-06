@@ -8,9 +8,10 @@ namespace PARCHIS
 {
     internal static class TextDrawer
     {
+        //textura de las letras .png.
         static Texture2D lettersTexture;
         
-
+        //textura de las letras geter
         public static Texture2D LettersTexture
         {
             get { return lettersTexture; }

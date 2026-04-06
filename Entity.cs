@@ -11,6 +11,7 @@ namespace PARCHIS
     //ficha
     internal abstract class Entity
     {
+        #region properties
         //posicion en x e y.
 
         protected int x;
@@ -27,7 +28,9 @@ namespace PARCHIS
             get { return y; }
             set { y = value; }
         }
+        #endregion
 
+        #region methods
         public Entity(int InitX, int InitY)
         {
             //inicializando x.
@@ -41,5 +44,6 @@ namespace PARCHIS
 
         //metodo para dibujar.
         public abstract void Draw(SpriteBatch _spriteBatch, int BoardWidth, int BoardHeight);
+        #endregion
     }
 }

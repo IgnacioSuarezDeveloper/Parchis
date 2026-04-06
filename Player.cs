@@ -11,18 +11,26 @@ namespace PARCHIS
     internal class Player
     {
         //4 fichas.
+
         Chip [] fichas;
 
         //color del jugador.
+
         ColorChip color;
+        public ColorChip Color
+        {
+            get { return color; }
+        }
 
         //geter fichas.
+
         public Chip [] Fichas
         {
             get { return fichas; }
         }
 
         //constructor.
+
         public Player(ColorChip _color, int BoardWidth, int BoardHeight)
         {
             //fichas del jugador.
@@ -55,7 +63,10 @@ namespace PARCHIS
             }
         }
 
+
+        
         //dibuja todas las fichas del jugador.
+
         public void DrawAllChips(SpriteBatch _spriteBatch, int BoardWidth, int BoardHeigth)
         {
             

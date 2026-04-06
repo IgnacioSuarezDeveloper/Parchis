@@ -5,17 +5,21 @@
 	1.Comienza la partida.
 		2. Inicializando
 			Indicar numero de jugadores n 
-				añadir clase deteccion click y posicion.
-				añadir boton de okay.
-				si hace click en el boton izquierdo menos jugadores si hace en el derecho mas jugadores.
-			Lista de jugadores con n jugadores. (COMPLETADO.)
+				añadir clase deteccion click y posicion. (Completado.)
+				añadir boton de okay. (Completado)
+				si hace click en el boton izquierdo menos jugadores si hace en el derecho mas jugadores.(completado).
+				si hace click en okay n jugadores seleccionado(completad)
+			Lista de jugadores con n jugadores. ()
 			Dibjar las fichas en la casilla de salida (COMPLETADO.) 
 			Dado. (NEXT). (Documentacion de las clases.)
-
+			1. Para cada jugador.
+			Dibujar un dado en cada color.
+			que se active el dado de cada jugador cuando es su turno.
+			que al hacer click en el dado salga una cara aleatoria y que pase al siguiente jugador.
 
 		3.Bucle Principal 
 			por cada jugador de la lista 
-				tirar Dado
+				tirar Dado 
 				si el jugador tiene fichas en casa y sale 5 el jugador saca ficha y le toca al siguiente jugador.
 				si el jugador no tiene fichas en casa y sale 5 el jugador elige que ficha quiere mover.
 				si el jugador saca numero diferente de 5 y tiene almenos una ficha fuera de casa puede mover tantas casillas como el numero que salga.

@@ -16,14 +16,19 @@ namespace PARCHIS
     }
     internal class Chip : Entity
     {
-        ColorChip color;
+        #region properties
 
+        ColorChip color;
         //heredado x;
         //heredad  y;
         //heredado X;
         //heredado Y;
         //constructor inicializa color de la ficha.
 
+        #endregion
+
+        #region methods
+        //constructor.
         public Chip(int xInit, int yInit, ColorChip ChipColor) : base(xInit, yInit)
         {
             color = ChipColor;
@@ -49,6 +54,7 @@ namespace PARCHIS
                 SpritesToTexture.DrawBlueChip(_spriteBatch, this.x, this.y, BoardWidth, BoardHeigth);
             }
         }
+        #endregion
 
     }
 }

@@ -16,13 +16,19 @@ namespace PARCHIS
 
         static Texture2D buttonsSprite;
 
-        //porcentaje del tablero que es el tamaño de las fichas.
+        //almacena el sprite de boton okay.png
 
+        static Texture2D bottonOkSprite;
+
+        //almacena el sprite de dices.png
+
+        static Texture2D DicesSprite;
+
+        //porcentaje del tablero que es el tamaño de las fichas.
         static int percentejeChipSize = 20;
 
         //cargando la imagen completa.
-
-        public static void LoadFullSprite(ContentManager Content)
+        public static void LoadSprites(ContentManager Content)
         {
 
             //cargando el sprite del parchis.
@@ -33,8 +39,14 @@ namespace PARCHIS
 
             buttonsSprite = Content.Load<Texture2D>("buttons.png");
 
-        }
+            //cargando el boton de okay
 
+            bottonOkSprite = Content.Load<Texture2D>("okButton.png");
+
+            //cargando sprite de dados.
+            DicesSprite = Content.Load<Texture2D>("dices.png");
+
+        }
 
         //dibujando todo el sprite de parchis.
         public static void DrawFullParchisSprite(SpriteBatch _spriteBatch)
@@ -163,6 +175,38 @@ namespace PARCHIS
                 Color.White
             );
         }//ficha azul.
+
+
+        //dibujar boton de okay.
+        public static void DrawOkButton(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeight)
+        {
+            // Definimos qué parte del sprite queremos (x, y, ancho, alto)
+            Rectangle fuente = new Rectangle(0, 0, bottonOkSprite.Width, bottonOkSprite.Height);
+
+            // Dibujamos
+            _spriteBatch.Draw(
+                bottonOkSprite,
+               new Rectangle((int)x, (int)y, (BoardWidth / 10) + 60, BoardHeight / 10),
+                fuente,
+                Color.White
+            );
+        }//ficha azul.
+
+        //dibuja los dados.
+        public static void DrawDice(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeight)
+        {
+            // Definimos qué parte del sprite queremos (x, y, ancho, alto)
+            Rectangle fuente = new Rectangle(0, 330, DicesSprite.Width  - 950, DicesSprite.Height  - 420);
+
+            // Dibujamos
+            _spriteBatch.Draw(
+                DicesSprite,
+               new Rectangle((int)x, (int)y, (BoardWidth / 10), BoardHeight / 10 + 90),
+                fuente,
+                Color.White
+            );
+        }//ficha azul.
+
 
     }
 }
