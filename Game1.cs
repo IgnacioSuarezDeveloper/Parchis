@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -23,6 +24,8 @@ namespace PARCHIS
         private bool clickOkButton = false;
         private int buttonsOfset = 300;
         private bool ListInit = false;
+        private bool DiceListInit = false;
+       
 
         public Game1()
         {
@@ -38,6 +41,7 @@ namespace PARCHIS
             // TODO: Add your initialization logic here
 
             base.Initialize();
+         
         }
 
         protected override void LoadContent()
@@ -130,12 +134,18 @@ namespace PARCHIS
             if (Menu.SelectedNPlayers)
             {
                 //inicializa la lista de jugadores. 
-               
-                InitList();
+                if (!ListInit)
+                {
+                    InitList();
 
-                //inicializar lista de dados.
+                }
+                if (!DiceListInit)
+                {
+                    //inicializar lista de dados.
 
-                InitDiceList();
+                    InitDiceList();
+                }
+
 
 
                 //dibujando tablero.
@@ -268,6 +278,7 @@ namespace PARCHIS
                     DicesList[i] = new Dice(PlayersList[i].Fichas[0].X - 40, PlayersList[i].Fichas[0].Y - 100 + add, BoardWidth, BoardHeidth, (ColorChip)i);
 
                 }
+                DiceListInit = true;
 
             }
         }
