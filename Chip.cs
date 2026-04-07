@@ -1,9 +1,4 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PARCHIS
 {
@@ -37,19 +32,22 @@ namespace PARCHIS
         //dibuja la ficha del color que es.
         public override void Draw(SpriteBatch _spriteBatch, int BoardWidth, int BoardHeigth)
         {
-            if(color == ColorChip.red)
+            if (color == ColorChip.red)
             {
                 SpritesToTexture.DrawRedChip(_spriteBatch, this.x, this.y, BoardWidth, BoardHeigth);
 
-            }else if(color == ColorChip.green)
+            }
+            else if (color == ColorChip.green)
             {
                 SpritesToTexture.DrawGreenChip(_spriteBatch, this.x, this.y, BoardWidth, BoardHeigth);
 
-            }else if(color == ColorChip.yellow)
+            }
+            else if (color == ColorChip.yellow)
             {
                 SpritesToTexture.DrawYellowChip(_spriteBatch, this.x, this.y, BoardWidth, BoardHeigth);
 
-            }else if(color == ColorChip.blue)
+            }
+            else if (color == ColorChip.blue)
             {
                 SpritesToTexture.DrawBlueChip(_spriteBatch, this.x, this.y, BoardWidth, BoardHeigth);
             }

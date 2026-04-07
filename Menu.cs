@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Xna.Framework;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework;
 
 namespace PARCHIS
 {
@@ -42,7 +37,7 @@ namespace PARCHIS
             get { return Nplayers; }
             set
             {
-                if(value >= 2 && value <= 4)
+                if (value >= 2 && value <= 4)
                 {
                     Nplayers = value;
                 }
@@ -60,7 +55,6 @@ namespace PARCHIS
         //Inicializa posicion de los botones del menu para seleccionar numero de Jugadores.
         public static void InitializeButtons(Vector2 Mxy, Vector2 Pxy, Vector2 Oxy)
         {
-            Nplayers = 2;
             selectedNPlayers = false;
             MinusButtonPositionxy = Mxy;
             MaxButtonPositionxy = Pxy;
@@ -68,7 +62,7 @@ namespace PARCHIS
         }
 
         //Boton para añadir jugador.
-        public static void MaxButtonClicked(bool cliked, Vector2 MousePos, ref bool clickRightButton,  int BoardWidth, int BoardHeidth)
+        public static void MaxButtonClicked(bool cliked, Vector2 MousePos, ref bool clickRightButton, int BoardWidth, int BoardHeidth)
         {
 
             if (cliked)

@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System.Security.Cryptography.X509Certificates;
 
 
 namespace PARCHIS
@@ -10,13 +9,12 @@ namespace PARCHIS
     {
         //textura de las letras .png.
         static Texture2D lettersTexture;
-        
+
         //textura de las letras geter
         public static Texture2D LettersTexture
         {
             get { return lettersTexture; }
         }
-
 
         //cargar la textura de letras
         public static void LoadLettersTexture(ContentManager Content)
@@ -24,13 +22,11 @@ namespace PARCHIS
             lettersTexture = Content.Load<Texture2D>("letras.png");
         }
 
-
         //dibujar todas las letras.
         public static void DrawLettersTexture(SpriteBatch _spriteBatch)
         {
             _spriteBatch.Draw(lettersTexture, new Vector2(0, 0), null, Color.White, 0f, Vector2.Zero, 0.5f, SpriteEffects.None, 0f);
         }
-
 
         //dibuja el texto elegido.
         public static void DrawText(SpriteBatch _spriteBatch, string texto)
@@ -40,9 +36,8 @@ namespace PARCHIS
 
             texto = texto.ToUpper();
 
-            CutLetter(_spriteBatch, texto, width, height, 0,0);
+            CutLetter(_spriteBatch, texto, width, height, 0, 0);
         }
-
 
         //dibujar el texto.
         public static void DrawTextUpdate(SpriteBatch spriteBatch, Texture2D spriteSheet, string text, Vector2 position, int letterSize = 200)
@@ -85,9 +80,8 @@ namespace PARCHIS
             }
         }
 
-
         //corta letras del sprite segun el texto elegido.
-        private static void CutLetter(SpriteBatch _spriteBatch, string text, int letterOriginalWidth, int letterOriginalHeight , int posOfTextY, int posOfTextX) 
+        private static void CutLetter(SpriteBatch _spriteBatch, string text, int letterOriginalWidth, int letterOriginalHeight, int posOfTextY, int posOfTextX)
         {
             int count = 0;
             int Y = 0;
@@ -97,34 +91,38 @@ namespace PARCHIS
 
                 if (ind >= 0 && ind <= 5)
                 {
-                   
+
                     Y = 0;
-                }else if(ind >= 6 && ind <= 10)
+                }
+                else if (ind >= 6 && ind <= 10)
                 {
                     ind = ind - 5;
                     Y = 1;
-                }else if(ind >= 11 && ind <= 15)
+                }
+                else if (ind >= 11 && ind <= 15)
                 {
                     ind = ind - 10;
                     Y = 2;
-                }else if(ind >= 16 && ind <= 20)
+                }
+                else if (ind >= 16 && ind <= 20)
                 {
                     ind = ind - 15;
                     Y = 3;
-                }else if (ind >= 21 && ind <= 25)
+                }
+                else if (ind >= 21 && ind <= 25)
                 {
                     ind = ind - 20;
                     Y = 4;
                 }
 
-                    // Definimos qué parte del sprite queremos (x, y, ancho, alto)
-                    Rectangle fuente = new Rectangle(ind * letterOriginalWidth, Y * letterOriginalHeight, letterOriginalWidth, letterOriginalHeight);
+                // Definimos qué parte del sprite queremos (x, y, ancho, alto)
+                Rectangle fuente = new Rectangle(ind * letterOriginalWidth, Y * letterOriginalHeight, letterOriginalWidth, letterOriginalHeight);
 
                 // Dibujamos
                 _spriteBatch.Draw
                     (
                         lettersTexture,
-                        new Rectangle((((i - (6 * count)) * letterOriginalWidth / 2 )  + posOfTextX),  posOfTextY + (count * letterOriginalHeight), letterOriginalWidth / 2, letterOriginalHeight / 2), fuente,
+                        new Rectangle((((i - (6 * count)) * letterOriginalWidth / 2) + posOfTextX), posOfTextY + (count * letterOriginalHeight), letterOriginalWidth / 2, letterOriginalHeight / 2), fuente,
                         Color.White
                     );
 

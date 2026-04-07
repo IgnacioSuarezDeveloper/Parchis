@@ -9,20 +9,22 @@ namespace PARCHIS
     internal static class SpritesToTexture
     {
         //almacena el sprite del parchis. png.
-
         static Texture2D fullSprite;
 
         //almacena el sprite de botones .png.
-
         static Texture2D buttonsSprite;
 
         //almacena el sprite de boton okay.png
-
         static Texture2D bottonOkSprite;
 
         //almacena el sprite de dices.png
-
         static Texture2D DicesSprite;
+
+        //get dice sprites.
+        public static Texture2D DIcesSprite
+        {
+            get { return DicesSprite; }
+        }
 
         //porcentaje del tablero que es el tamaño de las fichas.
         static int percentejeChipSize = 20;
@@ -54,14 +56,12 @@ namespace PARCHIS
             _spriteBatch.Draw(fullSprite, new Vector2(0, 0), null, Color.White, 0f, Vector2.Zero, 0.5f, SpriteEffects.None, 0f);
         }
 
-
         //dibujando todo el sprite de botones.
         public static void DrawFullButtonsSprite(SpriteBatch _spriteBatch)
         {
             _spriteBatch.Draw(buttonsSprite, new Vector2(0, 0), null, Color.White, 0f, Vector2.Zero, 0.5f, SpriteEffects.None, 0f);
 
         }
-
 
         //dibuja Ficha roja.
         public static void DrawRedChip(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeigth)
@@ -78,7 +78,6 @@ namespace PARCHIS
             );
         }
 
-
         //dibuaja ficha amarilla.
         public static void DrawYellowChip(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeigth)
         {
@@ -93,7 +92,6 @@ namespace PARCHIS
                 Color.White
             );
         }
-
 
         //dibuja la ficha verde.
         public static void DrawGreenChip(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeigth)
@@ -110,9 +108,8 @@ namespace PARCHIS
             );
         }
 
-
         //dibuja la ficha azul.
-        public static void DrawBlueChip(SpriteBatch _spriteBatch, float x, float y , int BoardWidth, int BoardHeight)
+        public static void DrawBlueChip(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeight)
         {
             // Definimos qué parte del sprite queremos (x, y, ancho, alto)
             Rectangle fuente = new Rectangle(535, 250, 155, 180);
@@ -126,14 +123,13 @@ namespace PARCHIS
             );
         }//ficha azul.
 
-
         //dibuja Tablero.
-        public static void DrawBoard(SpriteBatch _spriteBatch, float x,float y, int BoardWidth, int BoardHeigth)
+        public static void DrawBoard(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeigth)
         {
             // Definimos qué parte del sprite queremos (x, y, ancho, alto)
             Rectangle fuente = new Rectangle(861, 360, 600, 600);
 
-           
+
 
             // Dibujamos
             _spriteBatch.Draw(
@@ -144,13 +140,12 @@ namespace PARCHIS
             );
         }
 
-
         //dibujar boton izquierdo.
         public static void DrawLeftButton(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeight)
         {
             // Definimos qué parte del sprite queremos (x, y, ancho, alto)
             Rectangle fuente = new Rectangle(345, 430, 240, 190);
-                
+
             // Dibujamos
             _spriteBatch.Draw(
                 buttonsSprite,
@@ -159,7 +154,6 @@ namespace PARCHIS
                 Color.White
             );
         }//ficha azul.
-        
 
         //dibujar boton derecho.
         public static void DrawRightButton(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeight)
@@ -175,7 +169,6 @@ namespace PARCHIS
                 Color.White
             );
         }//ficha azul.
-
 
         //dibujar boton de okay.
         public static void DrawOkButton(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeight)
@@ -193,10 +186,10 @@ namespace PARCHIS
         }//ficha azul.
 
         //dibuja los dados.
-        public static void DrawDice(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeight)
+        public static async void DrawDice(SpriteBatch _spriteBatch, float x, float y, int BoardWidth, int BoardHeight, int xRecorte)
         {
             // Definimos qué parte del sprite queremos (x, y, ancho, alto)
-            Rectangle fuente = new Rectangle(0, 330, DicesSprite.Width  - 950, DicesSprite.Height  - 420);
+            Rectangle fuente = new Rectangle(xRecorte, 330, DicesSprite.Width - 950, DicesSprite.Height - 420);
 
             // Dibujamos
             _spriteBatch.Draw(
@@ -206,7 +199,6 @@ namespace PARCHIS
                 Color.White
             );
         }//ficha azul.
-
 
     }
 }

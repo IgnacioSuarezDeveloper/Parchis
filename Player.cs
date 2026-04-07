@@ -1,9 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PARCHIS
 {
@@ -11,26 +7,24 @@ namespace PARCHIS
     internal class Player
     {
         //4 fichas.
-
-        Chip [] fichas;
+        Chip[] fichas;
 
         //color del jugador.
-
         ColorChip color;
+
+        //geter de Color.
         public ColorChip Color
         {
             get { return color; }
         }
 
         //geter fichas.
-
-        public Chip [] Fichas
+        public Chip[] Fichas
         {
             get { return fichas; }
         }
 
         //constructor.
-
         public Player(ColorChip _color, int BoardWidth, int BoardHeight)
         {
             //fichas del jugador.
@@ -46,14 +40,14 @@ namespace PARCHIS
 
             int xinit = Math.Abs(BoardWidth / 3);
             int yinit = Math.Abs(BoardHeight / 3);
-            
+
 
             for (int i = 0; i < fichas.Length; i++)
             {
-                if((int)color % 2 == 0)
+                if ((int)color % 2 == 0)
                 {
                     //fichas roja verde Posicion inicial.
-                    fichas[i] = new Chip((xinit / 2 - 100) + ((int)color * (xinit - 30) )  +  i * InitChipSeparation, yinit / 2, _color);
+                    fichas[i] = new Chip((xinit / 2 - 100) + ((int)color * (xinit - 30)) + i * InitChipSeparation, yinit / 2, _color);
                 }
                 else
                 {
@@ -64,18 +58,16 @@ namespace PARCHIS
         }
 
 
-        
         //dibuja todas las fichas del jugador.
-
         public void DrawAllChips(SpriteBatch _spriteBatch, int BoardWidth, int BoardHeigth)
         {
-            
+
             for (int i = 0; i < 4; i++)
             {
                 if (fichas[i] != null)
                 {
                     //dibuja las fichas del jugador.
-                    fichas[i].Draw(_spriteBatch,BoardWidth, BoardHeigth);
+                    fichas[i].Draw(_spriteBatch, BoardWidth, BoardHeigth);
                 }
             }
         }
